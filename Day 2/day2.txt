@@ -1,5 +1,6 @@
 package day2;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class one {
@@ -7,15 +8,21 @@ public class one {
         int count=0;
         Scanner s=new Scanner(System.in);
         System.out.println("Enter the range :");
+        ArrayList<Integer> a=new ArrayList();
         int num1=s.nextInt();
         int num2=s.nextInt();
         for(int i=num1;i<=num2;i++)
         {
             if( isPrime(i) == true)
             {
-                System.out.print(i+" ");
+                a.add(i);
+                count++;
             }
         }
+        count--;
+        System.out.println(a);
+        int sum=a.get(0)+a.get(count);
+        System.out.println(sum);
     }
     static boolean isPrime(int n)
     {

@@ -1,0 +1,52 @@
+-- joints
+
+
+create table x(
+id int,
+name1 varchar(20)
+);
+
+
+
+
+drop table y;
+create table y(
+id int,
+name2 varchar(20)
+);
+
+
+
+insert into x values (1,'x1');
+insert into x values (2,'x2');
+insert into x values (3,'x3');
+insert into x values (4,'x4');
+insert into x values (5,'x5');
+
+
+
+insert into y values (1,'y1');
+insert into y values (2,'y2');
+insert into y values (3,'y3');
+insert into y values (4,'y4');
+insert into y values (5,'y5');
+select* from x;
+select* from y;
+
+
+select x.id,x.name1,y.id,y.name2 from x inner join y on x.id=y.id;
+use prat;
+
+insert into x values (6,null);
+
+
+select * from x cross join y;
+select x.id,x.name1,y.id,y.name2 from x left join y on x.id=y.id;
+select c1.fname,c2.fname from customer as c1,customer as c2 where c1.fname=c2.fname;
+select * from student;
+
+
+
+select s1.name,s2.name,s1.id
+from student as s1,student as s2
+where s1.id=s2.id;

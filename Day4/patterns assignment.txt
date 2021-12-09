@@ -1,0 +1,940 @@
+1>
+    * 
+
+   * * 
+
+  * * * 
+
+ * * * * 
+
+* * * * * 
+
+package com.patterns;
+
+public class pattern1 {
+    public static void main(String args[])
+    {
+        int i, j, row = 6;
+        for (i=0; i<row; i++)
+        {
+            for (j=row-i; j>1; j--)
+            {
+                System.out.print(" ");
+            }
+            for (j=0; j<=i; j++ )
+            {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+    }
+}
+
+
+2>
+
+*
+
+* *
+
+* * *
+
+* * * *
+
+* * * * * 
+
+package com.patterns;
+
+public class pattern2 {
+        public static void main(String args[]) {
+            int i, j, row = 6;
+            for (i = 0; i < row; i++) {
+                for (j = 0; j <= i; j++) {
+                    System.out.print("* ");
+                }
+
+                System.out.println();
+            }
+        }
+    }
+
+3>
+
+           * 
+
+         * * 
+
+       * * * 
+
+     * * * * 
+
+   * * * * *
+
+package com.patterns;
+
+public class pattern3 {
+    public static void main(String args[])
+    {
+        int i, j, row = 6;
+        for (i=0; i<row; i++)
+        {
+            for (j=2*(row-i); j>=0; j--)
+            {
+                System.out.print(" ");
+            }
+            for (j=0; j<=i; j++ )
+            {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+    }
+}
+
+
+
+4>     *
+
+   ***
+
+  *****
+
+ *******
+
+*********
+
+ *******
+
+  *****
+
+   ***
+
+    *
+
+package com.patterns;
+
+import java.util.Scanner;
+
+public class pattern4 {
+    public static void main(String args[])
+    {
+        int row, i, j, space = 1;
+        System.out.print("Enter the number of rows you want to print: ");
+        Scanner sc = new Scanner(System.in);
+        row = sc.nextInt();
+        space = row - 1;
+        for (j = 1; j<= row; j++)
+        {
+            for (i = 1; i<= space; i++)
+            {
+                System.out.print(" ");
+            }
+            space--;
+            for (i = 1; i <= 2 * j - 1; i++)
+            {
+                System.out.print("*");
+            }
+            System.out.println("");
+        }
+        space = 1;
+        for (j = 1; j<= row - 1; j++)
+        {
+            for (i = 1; i<= space; i++)
+            {
+                System.out.print(" ");
+            }
+            space++;
+            for (i = 1; i<= 2 * (row - j) - 1; i++)
+            {
+                System.out.print("*");
+            }
+            System.out.println("");
+        }
+    }
+}
+
+
+5>
+
+* * * * * 
+
+* * * * 
+
+* * * 
+
+* * 
+
+* 
+package com.patterns;
+
+public class pattern5 {
+    public static void main(String[] args) {
+        int rows = 5;
+        for (int i = rows - 1; i >= 0; i--) {
+            for (int j = 0; j <= i; j++) {
+                System.out.print("*" + " ");
+            }
+            System.out.println();
+        }
+
+    }
+}
+
+
+
+
+6>
+
+     *
+
+    **
+
+   ***
+
+  ****
+
+ *****
+
+****** 
+package com.patterns;
+
+public class pattern6 {
+    public static void main(String args[])
+    {
+        int i, j, row = 6;
+        for (i=0; i<row; i++)
+        {
+            for (j=row-i; j>1; j--)
+            {
+                System.out.print(" ");
+            }
+            for (j=0; j<=i; j++ )
+            {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+    }
+}
+
+
+
+7>
+
+* * * * * 
+
+  * * * * 
+
+   * * * 
+
+    * * 
+
+     * 
+package com.patterns;
+
+public class pattern7 {
+    public static void main(String[] args)
+    {
+        int rows=8;
+        for (int i= 0; i<= rows-1; i++)
+        {
+            for (int j=0; j<=i; j++)
+            {
+                System.out.print(" ");
+            }
+            for (int k=0; k<=rows-1-i; k++)
+            {
+                System.out.print("*" + " ");
+            }
+            System.out.println();
+        }
+    }
+}
+
+
+
+8>
+
+*****
+
+ ****
+
+  ***
+
+   **
+
+    *
+
+
+package com.patterns;
+
+public class pattern8 {
+    public static void main(String[] args)
+    {
+        int rows=8;
+        for (int i= 0; i<= rows-1; i++)
+        {
+            for (int j=0; j<=i; j++)
+            {
+                System.out.print(" ");
+            }
+            for (int k=0; k<=rows-1-i; k++)
+            {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
+
+9>
+
+* 
+
+* * 
+
+* * * 
+
+* * * * 
+
+* * * * * 
+
+* * * * 
+
+* * * 
+
+* * 
+
+*  
+
+package com.patterns;
+
+import java.util.Scanner;
+
+public class pattern9
+    {
+        public static void main(String[] args)
+        {
+            int i, j, rows;
+            Scanner sc = new Scanner(System.in);
+            System.out.print("Enter the number of rows you want to print: ");
+            rows = sc.nextInt();
+            for (i= 0; i<= rows-1; i++)
+            {
+                for (j=0; j<=i; j++)
+                {
+                    System.out.print("*"+ " ");
+                }
+                System.out.println("");
+            }
+            for (i=rows-1; i>=0; i--)
+            {
+                for(j=0; j <= i-1;j++)
+                {
+                    System.out.print("*"+ " ");
+                }
+                System.out.println("");
+            }
+        }
+    }
+
+
+10>     
+    *
+
+   **
+
+  ***
+
+ ****
+
+*****
+
+ ****
+
+  ***
+
+   **
+
+    *
+
+package com.patterns;
+
+import java.util.Scanner;
+
+public class pattern10 {
+        public static void main(String[] args)
+        {
+            int i, j, k, rows;
+            Scanner sc = new Scanner(System.in);
+            System.out.print("Enter the number of rows you want to print: ");
+            rows = sc.nextInt();
+            for (i= 1; i<= rows ; i++)
+            {
+                for (j=i; j <rows ;j++)
+                {
+                    System.out.print(" ");
+                }
+                for (k=1; k<=i;k++)
+                {
+                    System.out.print("*");
+                }
+                System.out.println("");
+            }
+            for (i=rows; i>=1; i--)
+            {
+                for(j=i; j<=rows;j++)
+                {
+                    System.out.print(" ");
+                }
+                for(k=1; k<i ;k++)
+                {
+                    System.out.print("*");
+                }
+                System.out.println("");
+            }
+            sc.close();
+        }
+    }
+
+
+
+11>
+ * * * * * 
+
+ * * * * 
+
+  * * * 
+
+   * * 
+
+    * 
+
+    * 
+
+   * * 
+
+  * * * 
+
+ * * * * 
+
+* * * * * 
+
+package com.patterns;
+
+import java.util.Scanner;
+
+public class pattern11 {
+    public static void main(String[] args)
+    {
+        int i, j, k, n;
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the number of rows you want to print: ");
+        n = sc.nextInt();
+        for (i= 0; i<= n-1 ; i++)
+        {
+            for (j=0; j<i; j++)
+            {
+                System.out.print(" ");
+            }
+            for (k=i; k<=n-1; k++)
+            {
+                System.out.print("*" + " ");
+            }
+            System.out.println("");
+        }
+        for (i= n-1; i>= 0; i--)
+        {
+            for (j=0; j<i; j++)
+            {
+                System.out.print(" ");
+            }
+            for (k=i; k<=n-1; k++)
+            {
+                System.out.print("*" + " ");
+            }
+            System.out.println("");
+        }
+        sc.close();
+    }
+}
+
+
+
+
+12>     
+    *
+
+   * *
+
+  *   *
+
+ *     *
+
+********* 
+
+package com.patterns;
+
+public class pattern12 {
+    public static void main(String[] args)
+    {
+        int i, j, k, rows=9;
+        for (i=1; i<= rows ; i++)
+        {
+            for (j = i; j < rows ; j++)
+            {
+                System.out.print(" ");
+            }
+            for (k = 1; k <= (2*i -1) ;k++)
+            {
+                if(k==1 || i == rows || k==(2*i-1))
+                {
+                    System.out.print("*");
+                }
+                else
+                {
+                    System.out.print(" ");
+                }
+            }
+            System.out.println("");
+        }
+    }
+
+}
+
+
+13> 
+1 
+
+1 2 
+
+1 2 3 
+
+1 2 3 4 
+
+1 2 3 4 5 
+
+package com.patterns;
+
+public class pattern13 {
+    public static void main(String args[])
+    {
+        int i, j,number, n=5;
+        for(i=0; i<n; i++)
+        {
+            number=1;
+            for(j=0; j<=i; j++)
+            {
+                System.out.print(number+ " ");
+                number++;
+            }
+            System.out.println();
+        }
+    }
+}
+
+
+14> 
+1 
+
+2 3 
+
+4 5 6 
+
+7 8 9 10 
+
+11 12 13 14 15 
+
+package com.patterns;
+
+public class pattern14 {
+    public static void main(String[] args)
+    {
+        int i, j, k = 1;
+        for (i = 1; i <= 7; i++)
+        {
+            for (j = 1; j< i + 1; j++)
+            {
+                System.out.print(k++ + " ");
+            }
+            System.out.println();
+        }
+    }
+}
+
+
+15>          
+	     1
+
+           1   1
+
+         1   2   1
+
+       1   3   3   1
+
+     1   4   6   4   1
+
+package com.patterns;
+
+public class pattern15 {
+    public static void main(String[] args)
+    {
+        int n = 5;
+        for (int i = 0; i < n; i++)
+        {
+            int number = 1;
+            System.out.printf("%" + (n - i) * 2 + "s", "");
+            for (int j = 0; j <= i; j++)
+            {
+                System.out.printf("%4d", number);
+                number = number * (i - j) / (j + 1);
+            }
+            System.out.println();
+        }
+    }
+}
+
+
+16>    
+   1
+
+  212
+
+ 32123
+
+4321234
+
+ 32123
+
+  212
+
+   1
+
+package com.patterns;
+
+public class pattern16 {
+    public static void main(String[] args)
+    {
+        for (int i = 1; i <= 4; i++)
+        {
+            int n = 8;
+            for (int j = 1; j<= n - i; j++)
+            {
+                System.out.print(" ");
+            }
+            for (int k = i; k >= 1; k--)
+            {
+                System.out.print(k);
+            }
+            for (int l = 2; l <= i; l++)
+            {
+                System.out.print(l);
+            }
+            System.out.println();
+        }
+        for (int i = 3; i >= 1; i--)
+        {
+            int n = 10;
+            for (int j = 0; j<= n - i; j++)
+            {
+                System.out.print(" ");
+            }
+            for (int k = i; k >= 1; k--)
+            {
+                System.out.print(k);
+            }
+            for (int l = 2; l <= i; l++)
+            {
+                System.out.print(l);
+            }
+            System.out.println();
+        }
+    }
+}
+
+
+ 
+17>
+
+1 
+
+2 2 
+
+3 3 3 
+
+4 4 4 4 
+
+5 5 5 5 5 
+
+package com.patterns;
+
+import java.util.Scanner;
+
+public class pattern17 {
+        public static void main(String[] args)
+        {
+            int i, j, rows;
+            Scanner sc = new Scanner(System.in);
+            System.out.print("Enter the number of rows you want to print: ");
+            rows = sc.nextInt();
+            for (i = 1; i <= rows; i++)
+            {
+                for (j = 1; j <= i; j++)
+                {
+                    System.out.print(i+" ");
+                }
+                System.out.println();
+            }
+        }
+    }
+
+
+18>
+
+5 
+
+5 4 
+
+5 4 3 
+
+5 4 3 2 
+
+5 4 3 2 1 
+
+package com.patterns;
+
+import java.util.Scanner;
+
+public class pattern18 {
+    public static void main(String[] args)
+    {
+        int i, j, rows;
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the number of rows youy want to print: ");
+        rows = sc.nextInt();
+        for (i = rows; i >= 1; i--)
+        {
+            for (j = rows; j >= i; j--)
+            {
+                System.out.print(j+" ");
+            }
+
+            System.out.println();
+        }
+    }
+}
+
+
+19>
+
+1 
+
+2 1 
+
+3 2 1 
+
+4 3 2 1 
+
+5 4 3 2 1 
+
+
+package com.patterns;
+
+import java.util.Scanner;
+
+public class pattern19 {
+    public static void main(String[] args)
+    {
+        int i, j, n;
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the number of rows you want to print: ");
+        n = sc.nextInt();
+        for (i = 1; i <= n; i++)
+        {
+            for (j = i; j >= 1; j--)
+            {
+                System.out.print(j+" ");
+            }
+            System.out.println();
+        }
+    }
+}
+
+
+20>
+
+10101
+
+01010
+
+10101
+
+01010
+
+10101 
+
+package com.patterns;
+
+public class pattern20 {
+    public static void main(String[] args)
+    {
+        int rows=5;
+        for (int i = 1; i <= rows; i++)
+        {
+            int num;
+            if(i%2 == 0)
+            {
+                num = 0;
+                for (int j = 1; j <= rows; j++)
+                {
+                    System.out.print(num);
+                    num = (num == 0)? 1 : 0;
+                }
+            }
+            else
+            {
+                num = 1;
+                for (int j = 1; j <= rows; j++)
+                {
+                    System.out.print(num);
+                    num = (num == 0)? 1 : 0;
+                }
+            }
+            System.out.println();
+        }
+    }
+
+
+}
+
+
+
+
+21>
+
+1
+
+10
+
+101
+
+1010
+
+10101 
+
+
+package com.patterns;
+
+public class pattern21 {
+    public static void main(String[] args)
+    {
+        int i, j, rows=5;
+        for (i = 1; i <= rows; i++)
+        {
+            for (j = 1; j <= i; j++)
+            {
+                if(j%2 == 0)
+                {
+                    System.out.print(0);
+                }
+                else
+                {
+                    System.out.print(1);
+                }
+            }
+            System.out.println();
+        }
+    }
+}
+
+
+22>
+
+1 2 3 4 5 
+
+ 2 3 4 5 
+
+  3 4 5 
+
+   4 5 
+
+    5 
+
+   4 5 
+
+  3 4 5 
+
+ 2 3 4 5 
+
+1 2 3 4 5 
+package com.patterns;
+
+public class pattern22 {
+    public static void main(String[] args)
+    {
+        int n = 5;
+        for (int i = 1; i <= n; i++)
+        {
+            for (int j = 1; j < i; j++)
+            {
+                System.out.print(" ");
+            }
+            for (int k = i; k <= n; k++)
+            {
+                System.out.print(k+" ");
+            }
+            System.out.println();
+        }
+        for (int i = n-1; i >= 1; i--)
+        {
+            for (int j = 1; j < i; j++)
+            {
+                System.out.print(" ");
+            }
+            for (int k = i; k <= n; k++)
+            {
+                System.out.print(k+" ");
+            }
+            System.out.println();
+        }
+    }
+}
+
+
+
+23>
+
+A 
+
+A B 
+
+A B C 
+
+A B C D 
+
+A B C D E 
+
+package com.patterns;
+
+public class pattern23 {
+    public static void main(String[] args)
+    {
+        int alphabet = 65;
+        for (int i = 0; i <= 5; i++)
+        {
+            for (int j = 0; j <= i; j++)
+            {
+                System.out.print((char) (alphabet + j) + " ");
+            }
+            System.out.println();
+        }
+    }
+}
+
+
+
+
+
+
+A B C D E F
+

@@ -1,0 +1,134 @@
+
+mysql> use demo;
+Database changed
+mysql> create table student(id int, name, varchar(20), age int);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ', varchar(20), age int)' at line 1
+mysql> create table student(id int, name varchar(20), age int);
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> insert into student values(100,'srinivas',22);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into student values(101,'sujan',22);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into student values(102,'veera',22);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from student;
++------+----------+------+
+| id   | name     | age  |
++------+----------+------+
+|  100 | srinivas |   22 |
+|  101 | sujan    |   22 |
+|  102 | veera    |   22 |
++------+----------+------+
+3 rows in set (0.00 sec)
+
+mysql> create table employee(empid int, firstname varchar(20),lastname varchar(20), age int, salary int, designation varchar(20));
+Query OK, 0 rows affected (0.03 sec)
+
+mysql> insert into employee values(100,'Anil','kumar',23,40000,'Manager');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into employee values(101,'Tharun','sai',23,30000,'Technical');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into employee values(102,'Sita','ram',28,35000,'HR');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into employee values(103,'Srinivas','manju',22,80000,'lead manager');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into employee values(104,'Raju','bali',24,70000,'IT head
+ manager');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from employee;
++-------+-----------+----------+------+--------+-----------------+
+| empid | firstname | lastname | age  | salary | designation     |
++-------+-----------+----------+------+--------+-----------------+
+|   100 | Anil      | kumar    |   23 |  40000 | Manager         |
+|   101 | Tharun    | sai      |   23 |  30000 | Technical       |
+|   102 | Sita      | ram      |   28 |  35000 | HR              |
+|   103 | Srinivas  | manju    |   22 |  80000 | lead manager    |
+|   104 | Raju      | bali     |   24 |  70000 | IT head manager |
++-------+-----------+----------+------+--------+-----------------+
+5 rows in set (0.00 sec)
+
+mysql> select concat(firstname, ' ', lastname) as fullname from employee;
++----------------+
+| fullname       |
++----------------+
+| Anil kumar     |
+| Tharun sai     |
+| Sita ram       |
+| Srinivas manju |
+| Raju bali      |
++----------------+
+5 rows in set (0.00 sec)
+
+
+mysql> select salary as basic_salary from employee;
++--------------+
+| basic_salary |
++--------------+
+|        40000 |
+|        30000 |
+|        35000 |
+|        80000 |
+|        70000 |
++--------------+
+5 rows in set (0.00 sec)
+
+mysql> select 0.1 * salary as HRA from employee;
++--------+
+| HRA    |
++--------+
+| 4000.0 |
+| 3000.0 |
+| 3500.0 |
+| 8000.0 |
+| 7000.0 |
++--------+
+5 rows in set (0.00 sec)
+
+mysql> select 0.5 * salary as DA from employee;
++---------+
+| DA      |
++---------+
+| 20000.0 |
+| 15000.0 |
+| 17500.0 |
+| 40000.0 |
+| 35000.0 |
++---------+
+5 rows in set (0.00 sec)
+
+mysql> select 0.7 * salary as PF from employee;
++---------+
+| PF      |
++---------+
+| 28000.0 |
+| 21000.0 |
+| 24500.0 |
+| 56000.0 |
+| 49000.0 |
++---------+
+5 rows in set (0.00 sec)
+
+
+mysql> select salary+ 0.1*salary + 0.05 * salary- 0.07 * salary  as Gross_Salary
+  from employee;
++--------------+
+| Gross_Salary |
++--------------+
+|     43200.00 |
+|     32400.00 |
+|     37800.00 |
+|     86400.00 |
+|     75600.00 |
++--------------+
+5 rows in set (0.00 sec)
+
+
